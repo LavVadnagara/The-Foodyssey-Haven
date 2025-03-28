@@ -1,1 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap");
+
+:root {
+     --LogoFont: 'Glass Antiqua', cursive;
+     --BodyFont: "Josefin Sans", sans-serif;
+     --ColorStyle: #ff6961;
+     --FontSize: 14px;
+}
+
+body {
+     background-color: #212121;
+}

@@ -48,7 +48,7 @@ pwShowHide.forEach((eyeIcon) => {
 
 var randomBackground = Math.ceil(Math.random() * 30);
 
-var backgroundimg = "ProjectImages/background" + randomBackground + ".jpg";
+var backgroundimg = "ProjectImages/background" + 5 + ".jpg";
 
 var style = document.createElement('style');
 
@@ -62,7 +62,7 @@ style.innerHTML = `
     width: 100%;
     height: 100%;
     z-index: -1;
-    opacity: 0.3;
+    opacity: 0.4;
   }
 `;
 
