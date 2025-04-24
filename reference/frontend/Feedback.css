@@ -224,7 +224,7 @@ input[type="submit"]:hover {
     color: var(--ColorStyle);
     font-weight: bold;
     line-height: 46px;
-    font-size: 50px;
+    font-size: 2.7rem;
     text-align: center;
     justify-content: center;
     font-family: var(--LogoFont);
@@ -277,6 +277,10 @@ input[type="submit"]:hover {
     border: 10px solid transparent;
     border-radius: 20px;
     outline: 2px solid var(--ColorStyle);
+}
+
+.leftbox > .boxcontent {
+    padding-bottom: 1rem;
 }
 
 .til1{

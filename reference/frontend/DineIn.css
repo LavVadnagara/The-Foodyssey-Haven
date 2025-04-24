@@ -24,7 +24,7 @@ body {
     border-bottom: 2px solid white;
     border-bottom-left-radius: 30px;
     border-bottom-right-radius: 30px;
-    width: 47%;
+    width: 40%;
     display: flex;
     justify-content: space-around;
     color: white;
@@ -59,7 +59,7 @@ body {
     color: var(--ColorStyle);
     font-weight: bold;
     line-height: 46px;
-    font-size: 50px;
+    font-size: 2.7rem;
     text-align: center;
     justify-content: center;
     font-family: var(--LogoFont);

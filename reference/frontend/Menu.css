@@ -135,7 +135,7 @@ button#prev-btn:hover i, button#next-btn:hover i {
     color: var(--ColorStyle);
     font-weight: bold;
     line-height: 46px;
-    font-size: 50px;
+    font-size: 2rem;
     text-align: center;
     justify-content: center;
     font-family: var(--LogoFont); 
@@ -238,7 +238,7 @@ button#prev-btn:hover i, button#next-btn:hover i {
     color: var(--ColorStyle);
     font-weight: bold;
     line-height: 46px;
-    font-size: 50px;
+    font-size: 2.7rem;
     text-align: center;
     justify-content: center;
     font-family: var(--LogoFont); 
