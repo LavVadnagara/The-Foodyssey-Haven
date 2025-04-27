@@ -90,8 +90,9 @@ body {
     font-size: 16px;
 }
 
-.DetBox1, .DetBox2 {
-    font-size: 15px;
+.DetBox1,
+.DetBox2 {
+    font-size: 1rem;
     text-align: center;
     font-family: var(--BodyFont);
     margin-top: 20px;
@@ -102,15 +103,23 @@ body {
     outline: 2px solid var(--ColorStyle);
 }
 
-.DetBox1 {
-    padding-bottom: 14px;
+.DetBox1 h3,
+.DetBox2 h2, 
+.DetBox2 h4 {
+    font-family: var(--BodyFont);
 }
+
+.DetBox1 {
+    padding-bottom: 1rem;
+}
+
 .DetBox2 {
     padding-top: 20px;
     padding-bottom: 16px;
 }
 
-.Container1, .Container2{
+.Container1,
+.Container2 {
     position: absolute;
     top: 200px;
     width: 250px;
@@ -118,11 +127,13 @@ body {
     background-color: white;
     color: black;
     border-radius: 25px;
+    line-height: 1.15;
 }
 
 .Container1 {
     left: 30px;
 }
+
 .Container2 {
     right: 30px;
 }
@@ -189,7 +200,7 @@ body {
 .booking-form button:hover {
     background-color: #ffb4af;
     transform: scale(1.1);
-    box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.24);
+    box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.24);
 }
 
 /* ------- */
@@ -212,7 +223,11 @@ body {
     outline: none;
 }
 
-#Uname, #Uemail, #Uphone, #URdate, #URtime {
+#Uname,
+#Uemail,
+#Uphone,
+#URdate,
+#URtime {
     width: 22rem;
     padding-left: 30px;
     margin-top: 0px;
@@ -224,12 +239,16 @@ body {
     border-color: var(--ColorStyle);
 }
 
-.booking-form input:is(:focus, :valid, :hover) ~ i{
+.booking-form input:is(:focus, :valid, :hover)~i {
     border-color: var(--ColorStyle);
     /* color: var(--ColorStyle); */
 }
 
-#FBIcon1, #FBIcon2, #FBIcon3, #FBIcon4, #FBIcon5 {
+#FBIcon1,
+#FBIcon2,
+#FBIcon3,
+#FBIcon4,
+#FBIcon5 {
     color: black;
     position: relative;
     top: 0px;
@@ -238,7 +257,11 @@ body {
     transition-duration: 0.4s;
 }
 
-input[type="text"], input[type="email"], input[type="tel"], input[type="date"], input[type="time"] {
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+input[type="time"] {
     font-family: Arial;
     font-size: 14px;
     background-color: transparent;
@@ -254,14 +277,7 @@ footer {
     font-size: 18px;
     text-align: center;
     position: relative;
-    margin-top: 204px;
-    margin-left: -8px;
-    margin-right: -8px;
-    margin-bottom: -8px;
-}
-
-:footer {
-    --footer-height: 120px;
+    margin-top: 15rem;
 }
 
 .footer-container {
@@ -291,12 +307,13 @@ footer {
 .footer-social a {
     display: inline-block;
     margin-right: 5px;
-    color: #fff;
-    transition: all 0.3s ease;
+    color: white;
+    transition: 0.4s;
 }
 
 .footer-social a:hover {
     /* transform: translateY(-5px); */
+    text-decoration: none;
     color: white;
     transform: scale(1.2);
     box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.5);
@@ -307,6 +324,7 @@ footer {
 }
 
 .footer-bottom {
+    transition-duration: 0.4s;
     margin-top: -17px;
 }
 
@@ -323,8 +341,8 @@ footer {
 }
 
 .fa {
-    height: 20px;
-    width: 20px;
+    height: 40px;
+    width: 40px;
     padding: 10px;
     text-align: center;
     text-decoration: none;
@@ -333,6 +351,7 @@ footer {
 }
 
 .fa-facebook:before, .fa-twitter:before, .fa-instagram:before {
+    /* content: "\f09a"; */
     font-size: 18px;
 }
 
@@ -356,14 +375,14 @@ footer {
     text-shadow: rgb(40, 25, 2);
 }
 
-.navigation_footer {
+.navigation_footer{
     font-family: var(--BodyFont);
     font-size: 15px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-
+    
 .navigation_footer a:hover {
     color: grey;
 }

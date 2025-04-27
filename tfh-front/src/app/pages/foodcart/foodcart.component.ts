@@ -32,10 +32,28 @@ export class FoodcartComponent {
   }
 
   // Dialog control
-  openDialog(dialogId: string) {
+  openDialogOne(dialogId: string) {
     this.showDialogOne = !this.showDialogOne;
+    const dialog = document.getElementById(dialogId) as HTMLDialogElement;
+    if (dialog) {
+      dialog.showModal();
+    }
+  }
+  openDialogTwo(dialogId: string) {
     this.showDialogTwo = !this.showDialogTwo;
+    const dialog = document.getElementById(dialogId) as HTMLDialogElement;
+    if (dialog) {
+      dialog.showModal();
+    }
+  }
+  openDialogThree(dialogId: string) {
     this.showDialogThree = !this.showDialogThree;
+    const dialog = document.getElementById(dialogId) as HTMLDialogElement;
+    if (dialog) {
+      dialog.showModal();
+    }
+  }
+  openDialogFour(dialogId: string) {
     this.showDialogFour = !this.showDialogFour;
     const dialog = document.getElementById(dialogId) as HTMLDialogElement;
     if (dialog) {
@@ -44,6 +62,11 @@ export class FoodcartComponent {
   }
   
   closeDialog(dialogId: string) {
+    this.showDialogOne = false;
+    this.showDialogTwo = false;
+    this.showDialogThree = false;
+    this.showDialogFour = false;
+
     const dialog = document.getElementById(dialogId) as HTMLDialogElement;
     if (dialog) {
       dialog.close();

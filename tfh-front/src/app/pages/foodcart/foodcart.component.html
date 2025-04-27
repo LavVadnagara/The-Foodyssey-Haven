@@ -2,50 +2,50 @@
 
   <div class="openBtn">
     <div class="menuCard">Order Online</div>
-    <button (click)="openDialog('DialogOne')">Soups and Appetisers</button>
-    <button (click)="openDialog('DialogTwo')">Main Course</button>
-    <button (click)="openDialog('DialogThree')">Roti and Rice</button>
-    <button (click)="openDialog('DialogFour')">Desserts and Fix Thali</button>
+    <button class="menuBtns" (click)="openDialogOne('DialogOne')">Soups and Appetisers</button>
+    <button class="menuBtns" (click)="openDialogTwo('DialogTwo')">Main Course</button>
+    <button class="menuBtns" (click)="openDialogThree('DialogThree')">Roti and Rice</button>
+    <button class="menuBtns" (click)="openDialogFour('DialogFour')">Desserts and Fix Thali</button>
   </div>
 
   <!-- Dialog One -->
-  <dialog id="DialogOne" *ngIf="showDialogOne"> 
+  <dialog id="DialogOne" *ngIf="showDialogOne">
     <form method="dialog">
-      <h2>~ Soups ~</h2>
+      <h2 id="D1TitleOne">~ Soups ~</h2>
       <div>
         <p class="itemBox">Cream of Tomato - 90 Rs.<button type="button"
-            (click)="addToCart('Cream of Tomato', 90)">Add</button></p>
+            class="addbtn" (click)="addToCart('Cream of Tomato', 90)">Add</button></p>
         <hr>
         <p class="itemBox">Cheese corn Soup - 105 Rs.<button type="button"
-            (click)="addToCart('Cheese corn Soup', 105)">Add</button></p>
+            class="addbtn" (click)="addToCart('Cheese corn Soup', 105)">Add</button></p>
         <hr>
         <p class="itemBox">Almond Broccoli Soup - 105 Rs.<button type="button"
-            (click)="addToCart('Almond Broccoli Soup', 105)">Add</button></p>
+            class="addbtn" (click)="addToCart('Almond Broccoli Soup', 105)">Add</button></p>
         <hr>
         <p class="itemBox">Hot & Sour Soup - 105 Rs.<button type="button"
-            (click)="addToCart('Hot & Sour Soup', 105)">Add</button></p>
+            class="addbtn" (click)="addToCart('Hot & Sour Soup', 105)">Add</button></p>
         <hr>
         <p class="itemBox">Sweet Corn Soup - 110 Rs.<button type="button"
-            (click)="addToCart('Sweet Corn Soup', 110)">Add</button></p>
+            class="addbtn" (click)="addToCart('Sweet Corn Soup', 110)">Add</button></p>
         <hr>
       </div>
 
-      <h2>~ Appetisers ~</h2>
+      <h2 id="D1TitleTwo">~ Appetisers ~</h2>
       <div>
         <p class="itemBox">Veg Manchurian - 150 Rs.<button type="button"
-            (click)="addToCart('Veg Manchurian', 150)">Add</button></p>
+            class="addbtn" (click)="addToCart('Veg Manchurian', 150)">Add</button></p>
         <hr>
         <p class="itemBox">Spring Roll - 130 Rs.<button type="button"
-            (click)="addToCart('Spring Roll', 130)">Add</button></p>
+            class="addbtn" (click)="addToCart('Spring Roll', 130)">Add</button></p>
         <hr>
         <p class="itemBox">Paneer Chilly Dry - 150 Rs.<button type="button"
-            (click)="addToCart('Paneer Chilly Dry', 150)">Add</button></p>
+            class="addbtn" (click)="addToCart('Paneer Chilly Dry', 150)">Add</button></p>
         <hr>
         <p class="itemBox">Harabhara Kebab - 120 Rs.<button type="button"
-            (click)="addToCart('Harabhara Kebab', 120)">Add</button></p>
+            class="addbtn" (click)="addToCart('Harabhara Kebab', 120)">Add</button></p>
         <hr>
         <p class="itemBox">Hakka Noodles - 150 Rs.<button type="button"
-            (click)="addToCart('Hakka Noodles', 150)">Add</button></p>
+            class="addbtn" (click)="addToCart('Hakka Noodles', 150)">Add</button></p>
         <hr>
       </div>
 
@@ -56,16 +56,16 @@
   <!-- Dialog Two -->
   <dialog id="DialogTwo" *ngIf="showDialogTwo">
     <form method="dialog">
-      <h2>~ Main Course ~</h2>
+      <h2 id="D2Title">~ Main Course ~</h2>
       <div>
         <p class="itemBox">Paneer Butter Masala - 180 Rs.<button type="button"
-            (click)="addToCart('Paneer Butter Masala', 180)">Add</button></p>
+            class="addbtn" (click)="addToCart('Paneer Butter Masala', 180)">Add</button></p>
         <hr>
         <p class="itemBox">Mix Vegetable - 180 Rs.<button type="button"
-            (click)="addToCart('Mix Vegetable', 180)">Add</button></p>
+            class="addbtn" (click)="addToCart('Mix Vegetable', 180)">Add</button></p>
         <hr>
         <p class="itemBox">Cheese Butter Masala - 200 Rs.<button type="button"
-            (click)="addToCart('Cheese Butter Masala', 200)">Add</button></p>
+            class="addbtn" (click)="addToCart('Cheese Butter Masala', 200)">Add</button></p>
         <hr>
         <!-- Add more main course items as needed -->
       </div>
@@ -77,23 +77,23 @@
   <!-- Dialog Three -->
   <dialog id="DialogThree" *ngIf="showDialogThree">
     <form method="dialog">
-      <h2>~ Roti ~</h2>
+      <h2 id="D3TitleOne">~ Roti ~</h2>
       <div>
-        <p class="itemBox">Plain Roti - 20 Rs.<button type="button" (click)="addToCart('Plain Roti', 20)">Add</button>
+        <p class="itemBox">Plain Roti - 20 Rs.<button type="button" class="addbtn" (click)="addToCart('Plain Roti', 20)">Add</button>
         </p>
         <hr>
-        <p class="itemBox">Butter Roti - 30 Rs.<button type="button" (click)="addToCart('Butter Roti', 30)">Add</button>
+        <p class="itemBox">Butter Roti - 30 Rs.<button type="button" class="addbtn" (click)="addToCart('Butter Roti', 30)">Add</button>
         </p>
         <hr>
         <!-- Add more roti items -->
       </div>
 
-      <h2>~ Rice ~</h2>
+      <h2 id="D3TitleTwo">~ Rice ~</h2>
       <div>
-        <p class="itemBox">Plain Rice - 100 Rs.<button type="button" (click)="addToCart('Plain Rice', 100)">Add</button>
+        <p class="itemBox">Plain Rice - 100 Rs.<button type="button" class="addbtn" (click)="addToCart('Plain Rice', 100)">Add</button>
         </p>
         <hr>
-        <p class="itemBox">Jeera Rice - 130 Rs.<button type="button" (click)="addToCart('Jeera Rice', 130)">Add</button>
+        <p class="itemBox">Jeera Rice - 130 Rs.<button type="button" class="addbtn" (click)="addToCart('Jeera Rice', 130)">Add</button>
         </p>
         <hr>
         <!-- Add more rice items -->
@@ -106,14 +106,24 @@
   <!-- Dialog Four -->
   <dialog id="DialogFour" *ngIf="showDialogFour">
     <form method="dialog">
-      <h2>~ Desserts ~</h2>
+      <h2 id="D4TitleOne">~ Desserts ~</h2>
       <div>
-        <p class="itemBox">Gulab Jamun - 85 Rs.<button type="button" (click)="addToCart('Gulab Jamun', 85)">Add</button>
+        <p class="itemBox">Gulab Jamun - 85 Rs.<button type="button" class="addbtn" (click)="addToCart('Gulab Jamun', 85)">Add</button>
         </p>
         <hr>
-        <p class="itemBox">Jalebi - 75 Rs.<button type="button" (click)="addToCart('Jalebi', 75)">Add</button></p>
+        <p class="itemBox">Jalebi - 75 Rs.<button type="button" class="addbtn" (click)="addToCart('Jalebi', 75)">Add</button></p>
         <hr>
-        <p class="itemBox">Rasgulla - 80 Rs.<button type="button" (click)="addToCart('Rasgulla', 80)">Add</button></p>
+        <p class="itemBox">Rasgulla - 80 Rs.<button type="button" class="addbtn" (click)="addToCart('Rasgulla', 80)">Add</button></p>
+        <hr>
+      </div>
+      <h2 id="D4TitleOne">~ Fix Thali ~</h2>
+      <div>
+        <p class="itemBox">Punjabi Thali - 250 Rs.<button type="button" class="addbtn" (click)="addToCart('Punjabi Thali', 250)">Add</button>
+        </p>
+        <hr>
+        <p class="itemBox">Gujarati Thali - 200 Rs.<button type="button" class="addbtn" (click)="addToCart('Gujarati Thali', 200)">Add</button></p>
+        <hr>
+        <p class="itemBox">Chole Kulcha - 150 Rs.<button type="button" class="addbtn" (click)="addToCart('Chole Kulcha', 150)">Add</button></p>
         <hr>
       </div>
 

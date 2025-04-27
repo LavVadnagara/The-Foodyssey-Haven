@@ -13,18 +13,6 @@ body{
     --FontSize: 14px;
 }
 
-/* .top::before{
-    background: url('https://source.unsplash.com/collection/190727/1263x632') no-repeat center center/cover;
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 1263px;
-    height: 632px;
-    z-index: -1;
-    opacity: 0.4;
-} */
-
 .top{
     width: 100%;
     height: auto;
@@ -151,6 +139,7 @@ body{
     background-color: white;
     width: 35.625rem;
     height: 300px;
+    padding-top: 4rem;
     border-radius: 25px;
     margin-left: 10px;
     margin-top: 17px;
@@ -176,7 +165,8 @@ body{
     width: 570px;
     height: 350px;
     border-radius: 25px;
-    margin: 0px 35px;
+    padding-top: 0.5rem;
+    margin: 0px 2.1875rem;
     margin-top: -6.5px;
     margin-left: 120px;
     color: black;
@@ -249,43 +239,33 @@ body{
 .box31-include{
     position: relative;
     top: -40px;
+    padding-top: 3rem;
 }
 
-:root {
-    --IconSize: 45px;
+#icon1, #icon2, #icon3 {
+    display: inline;
+    padding: 0%;
+    margin: 0%;
+    position: relative;
+    color: var(--ColorStyle);
+}
+#icon1:before, #icon2:before, #icon3:before {
+    font-size: 2rem;
 }
 
 #icon1{
-    display: inline;
-    padding: 0%;
-    margin: 0%;
-    font-size: var(--IconSize);
-    position: relative;
-    top: 120px;
+    top: 75px;
     left: 0px;
-    color: var(--ColorStyle);
 }
 
 #icon2{
-    display: inline;
-    padding: 0%;
-    margin: 0%;
-    font-size: var(--IconSize);;
-    position: relative;
-    top: 245px;
-    left: -50px;
-    color: var(--ColorStyle);
+    top: 190px;
+    left: -30px;
 }
 
 #icon3{
-    display: inline;
-    padding: 0%;
-    margin: 0%;
-    font-size: var(--IconSize);;
-    position: relative;
-    top: 375px;
-    left: -97px;
-    color: var(--ColorStyle);
+    top: 308px;
+    left: -50px;
 }
 
 /* --------------------------------------------------------------------------------------------------------------------------------------- */

@@ -279,11 +279,11 @@ input[type="submit"]:hover {
 }
 
 .rightbox {
-    left: 30px;
+    right: 2rem;
 }
 
 .leftbox {
-    left: 975px;
+    left: 2rem;
 }
 
 .boxcontent {
@@ -293,14 +293,14 @@ input[type="submit"]:hover {
     margin-top: 20px;
     margin-left: 20px;
     margin-right: 20px;
-    padding-bottom: 40px;
+    padding-bottom: 5.5rem;
     border: 10px solid transparent;
     border-radius: 20px;
     outline: 2px solid var(--ColorStyle);
 }
 
 .leftbox>.boxcontent {
-    padding-bottom: 1rem;
+    padding-bottom: 5.5rem;
 }
 
 .til1 {
