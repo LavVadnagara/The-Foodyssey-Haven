@@ -1,0 +1,102 @@
+body {
+     background-color: black;
+}
+
+:root {
+     --LogoFont: 'Glass Antiqua', cursive;
+     --BodyFont: 'Josefin Sans', sans-serif;
+     --ColorStyle: #ff6961;
+     --FontSize: 14px;
+}
+
+/* .top::before{
+    background: url('b1.jpg') no-repeat center center/cover;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.3;
+} */
+
+.top {
+     width: 100%;
+     height: auto;
+     padding: 0px;
+}
+
+.Menubar {
+     border-bottom: 2px solid white;
+     border-bottom-left-radius: 30px;
+     border-bottom-right-radius: 30px;
+     width: 40%;
+     display: flex;
+     justify-content: space-around;
+     color: white;
+     font-family: var(--BodyFont);
+     font-size: 20px;
+     margin: 27px auto;
+     padding-bottom: 13px;
+     font-weight: lighter;
+     transition-duration: 0.4s;
+}
+
+.Menubar a {
+     transition-duration: 0.3s;
+     text-decoration: none;
+     color: white;
+}
+
+.Menubar a:hover {
+     /* transform: scale(1.2); */
+     color: var(--ColorStyle);
+}
+
+.Menubar #home {
+     font-weight: bolder;
+     color: white;
+}
+
+.left {
+     display: inline-block;
+     position: absolute;
+     left: 34px;
+     top: 18px;
+}
+
+.symbol {
+     color: var(--ColorStyle);
+     font-weight: bold;
+     line-height: 2.875rem;
+     font-size: 2.7rem;
+     text-align: center;
+     justify-content: center;
+     font-family: var(--LogoFont);
+}
+
+.right {
+     border: 1px solid gray;
+     display: inline-block;
+     position: absolute;
+     right: 40px;
+     top: 0.9375rem;
+     height: 2.5rem;
+     border-radius: 30px;
+     padding: 8px 30px;
+     padding-bottom: 6px;
+     padding-top: 6px;
+     font-family: var(--BodyFont);
+     background-color: black;
+     color: white;
+}
+
+.right #button {
+     background-color: black;
+     color: white;
+     border: none;
+     padding: 0px;
+     font-family: var(--BodyFont);
+     font-size: 16px;
+}

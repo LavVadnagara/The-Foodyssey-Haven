@@ -8,6 +8,5 @@ import { Component } from '@angular/core';
   styleUrl: './homepage.component.css'
 })
 export class HomepageComponent {
- openLogin(): void {
-window.open("login1.html", "_blank");}
+  
 }
