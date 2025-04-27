@@ -1,18 +1,21 @@
+import { NgIf } from '@angular/common';
 import { Component } from '@angular/core';
-import { HomepageComponent } from './pages/homepage/homepage.component';
-import { FeedbackComponent } from './pages/feedback/feedback.component';
-import { MenuComponent } from './pages/menupage/menupage.component';
-import { RouterLink, RouterOutlet } from '@angular/router';
+import { Router, RouterLink, RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, RouterLink],
+  imports: [RouterOutlet, RouterLink, NgIf],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
 
 export class AppComponent {
+  showComponent = true;
+
+  constructor(private router: Router) {}
+
   openLogin(): void {
-    window.open("login1.html", "_blank");
+    this.showComponent = !this.showComponent;
+    this.router.navigate(['login']);
   }
 }

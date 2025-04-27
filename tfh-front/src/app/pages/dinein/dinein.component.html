@@ -1,114 +1,105 @@
+<div class="Container1">
+  <div class="DetBox1">
+    <p>Reserve your spot to enjoy a delicious meal at The Foodyssey Haven.</p>
+    <h3>Our timings:</h3>
+    <p>Weekends: <br> 10:30am - 11:30pm</p>
+    <p>Weekdays: <br> 10:30am - 12:00pm</p>
+  </div>
+</div>
 
-  
-  <div class="cont1">
-    <div class="box11">
-      <img src="assets/ss1.png" class="img1" alt="Dine In Table Image" />
+<div class="BookingContainer">
+  <p>Book a Table</p>
+
+  <form class="booking-form">
+    <div class="FBForm">
+      <!-- <label for="name" class="Lname" >Name:</label> -->
+      <input type="text" class="field" placeholder="Your name" id="Uname" name="name" required>
+      <i class="uil uil-user" id="FBIcon1"></i>
     </div>
-  
-    <div class="box12">
-      <h4>Welcome to Dine-In at The Foodyssey Haven</h4>
-      <p>Experience the warmth of our hospitality and the richness of our flavors firsthand at The Foodyssey Haven. Our cozy and elegant dine-in experience offers a perfect setting for family dinners, romantic dates, and friendly get-togethers.</p>
-      <p>Whether you're celebrating a special occasion or just craving a delightful meal, we offer a wide range of dishes crafted with love, fresh ingredients, and a passion for culinary excellence.</p>
-      <h5>Serving Since 2020</h5>
+
+    <div class="FBForm">
+      <!-- <label for="email" class="Lname">Email:</label> -->
+      <input type="email" class="field" placeholder="Your Email" id="Uemail" name="email" required>
+      <i class="uil uil-envelope" id="FBIcon2"></i>
+    </div>
+
+    <div class="FBForm">
+      <!-- <label for="phone" class="Lname">Contact:</label> -->
+      <input type="tel" class="field" placeholder="Your Contact number" id="Uphone" name="phone" required>
+      <i class="uil uil-phone" id="FBIcon3"></i>
+    </div>
+
+    <div class="FBForm">
+      <!-- <label for="Rdate" class="Lname">Reservation Date:</label> -->
+      <input type="date" class="field" placeholder="Reservation Date" id="URdate" name="Rdate" required>
+      <i class="uil uil-calender" id="FBIcon4"></i>
+    </div>
+
+    <div class="FBForm">
+      <!-- <label for="Rtime" class="Lname">Reservation Time:</label> -->
+      <input type="time" class="field" placeholder="Reservation Time" id="URtime" name="Rtime" required>
+      <i class="uil uil-clock" id="FBIcon5"></i>
+    </div>
+
+    <!-- <input type="text" placeholder="Your Name" required> -->
+    <!-- <input type="email" placeholder="Your Email" required> -->
+    <!-- <input type="tel" placeholder="Your Phone Number" required> -->
+    <!-- <input type="date" placeholder="Reservation Date" required> -->
+    <!-- <input type="time" placeholder="Reservation Time" required> -->
+    <select id="UGno" required>
+      <option value="" disabled selected>Number of Guests</option>
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+      <option value="6">6</option>
+      <option value="7">7</option>
+      <option value="8">8</option>
+      <option value="9">9</option>
+      <option value="10">10</option>
+    </select>
+    <button class="Submitbtn" type="submit">Book Now</button>
+  </form>
+  <script src="DineIn.js"></script>
+</div>
+
+<div class="Container2">
+  <div class="DetBox2">
+    <h4>Today's Offer</h4>
+    <h2>Grab 40% with your family orders</h2>
+    <h4>Only for dining orders &#127881; </h4>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-container">
+    <div class="left_footer">
+      <div class="l">The Foodyssey Haven</div>
+    </div>
+
+    <div class="footer-info">
+      <p class="address"><i class="uil uil-map-marker"></i>Shoppers Arcade, near Adani college, Adani Shantigram,
+        Ahemdabad - 382352</p>
+      <p class="phone"><i class="uil uil-phone"></i>0123456789</p>
+      <p class="email"><i class="uil uil-envelope"></i>TheFoodysseyHaven&#64;restau.com</p>
+    </div>
+
+    <div class="footer-social">
+      <a href="https://x.com/?lang=en" class="fa fa-twitter" target="_blank"></a>
+      <a href="https://www.facebook.com/" class="fa fa-facebook" target="_blank"></a>
+      <a href="https://www.instagram.com/" class="fa fa-instagram" target="_blank"></a>
     </div>
   </div>
-  
-  <div class="cont2">
-    <div class="box22">
-      <h3>Reserve Your Table</h3>
-      <p>Booking a table is quick and simple. Fill out the form below to secure your spot and enjoy an unforgettable dining experience. Walk-ins are welcome too, but we recommend booking ahead, especially on weekends!</p>
-  
-      <form class="booking-form" (ngSubmit)="bookNow()" #bookingForm="ngForm">
-        <div class="FBForm">
-          <input type="text" class="field" placeholder="Your Name" name="name" [(ngModel)]="bookingData.name" required />
-          <i class="uil uil-user" id="FBIcon1"></i>
-        </div>
-  
-        <div class="FBForm">
-          <input type="email" class="field" placeholder="Your Email" name="email" [(ngModel)]="bookingData.email" required />
-          <i class="uil uil-envelope" id="FBIcon2"></i>
-        </div>
-  
-        <div class="FBForm">
-          <input type="tel" class="field" placeholder="Your Contact Number" name="phone" [(ngModel)]="bookingData.phone" required />
-          <i class="uil uil-phone" id="FBIcon3"></i>
-        </div>
-  
-        <div class="FBForm">
-          <input type="date" class="field" name="date" [(ngModel)]="bookingData.date" required />
-          <i class="uil uil-calendar-alt" id="FBIcon4"></i>
-        </div>
-  
-        <div class="FBForm">
-          <input type="time" class="field" name="time" [(ngModel)]="bookingData.time" required />
-          <i class="uil uil-clock" id="FBIcon5"></i>
-        </div>
-  
-        <div class="FBForm">
-          <select name="guests" class="field" [(ngModel)]="bookingData.guests" required>
-            <option value="" disabled selected>Number of Guests</option>
-            <option *ngFor="let guest of guests" [value]="guest">{{ guest }}</option>
-          </select>
-        </div>
-  
-        <button class="Submitbtn" type="submit">Book Now</button>
-      </form>
+
+  <div class="footer-bottom">
+    <div class="navigation_footer">
+      <a href="Homepage.html" target="_blank">Home</a>
+      <a href="Menu.html" target="_blank">Menu</a>
+      <a href="Aboutus.html" target="_blank">AboutUs</a>
+      <a href="Feedback.html" target="_blank">Feedback</a>
     </div>
-  
-    <div class="box21">
-      <img src="assets/ProjectImages/dinein2.jpg" class="img2" alt="Restaurant Ambience" />
-    </div>
+    <p>&copy; 2024 The Foodyssey Haven. All rights reserved.</p>
+    <p>The Foodyssey Haven Co.</p>
   </div>
-  
-  <div class="cont3">
-    <div class="box32">
-      <img src="assets/ProjectImages/dinein_offer.jpg" class="img3" alt="Offer Banner" />
-    </div>
-  
-    <div class="box31">
-      <div class="box31-icon">
-        <i class="fa fa-cutlery" id="icon1"></i>
-        <i class="fa fa-glass" id="icon2"></i>
-        <i class="fa fa-smile-o" id="icon3"></i>
-      </div>
-  
-      <div class="box31-include">
-        <h3>Today's Special Offer</h3>
-        <h4>Enjoy 40% Off</h4>
-        <p>Bring your family and friends and enjoy a massive 40% discount on dine-in orders today. Make your moments extra special with amazing food and great savings!</p>
-        <h4>Only for Dining Orders 🎉</h4>
-      </div>
-    </div>
-  </div>
-  
-  <footer>
-    <div class="footer-container">
-      <div class="left_footer">
-        <div class="l">The Foodyssey Haven</div>
-      </div>
-  
-      <div class="footer-info">
-        <p class="address"><i class="uil uil-map-marker"></i>Shoppers Arcade, near Adani College, Adani Shantigram, Ahmedabad - 382352</p>
-        <p class="phone"><i class="uil uil-phone"></i>0123456789</p>
-        <p><i class="uil uil-envelope"></i>TheFoodysseyHaven&#64;restau.com</p>
-      </div>
-  
-      <div class="footer-social">
-        <a href="https://x.com/" class="fa fa-twitter" target="_blank"></a>
-        <a href="https://www.facebook.com/" class="fa fa-facebook" target="_blank"></a>
-        <a href="https://www.instagram.com/" class="fa fa-instagram" target="_blank"></a>
-      </div>
-    </div>
-  
-    <div class="footer-bottom">
-      <div class="navigation_footer">
-        <a routerLink="/home" target="_blank">Home</a>
-        <a routerLink="/menu" target="_blank">Menu</a>
-        <a routerLink="/about-us" target="_blank">About Us</a>
-        <a routerLink="/feedback" target="_blank">Feedback</a>
-      </div>
-      <p>&copy; 2024 The Foodyssey Haven. All rights reserved.</p>
-      <p>The Foodyssey Haven Co.</p>
-    </div>
-  </footer>
-  
+</footer>

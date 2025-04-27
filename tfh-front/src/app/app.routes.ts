@@ -8,7 +8,7 @@ import { FoodcartComponent } from './pages/foodcart/foodcart.component';
 import { LoginComponent } from './pages/login/login.component';
 
 export const routes: Routes = [
-     { path: 'home', component: HomepageComponent},
+     { path: '', component: HomepageComponent},
      { path: 'menu', component: MenuComponent },
      { path: 'feedback', component: FeedbackComponent },
      { path: 'aboutus', component: AboutUsComponent},

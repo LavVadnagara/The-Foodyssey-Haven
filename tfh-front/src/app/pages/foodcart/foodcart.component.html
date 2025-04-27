@@ -1,157 +1,143 @@
 <div class="top">
-    <div class="left">
-      <div class="symbol">The Foodyssey Haven</div>
-    </div>
-  
-    <div class="Menubar">
-      <a routerLink="/home">Home</a>
-      <a routerLink="/menu">Menu</a>
-      <a routerLink="/about">AboutUs</a>
-      <a routerLink="/feedback">Feedback</a>
-    </div>
-  
-    <div class="right">
-      <button id="button" (click)="navigateToLogin()">Sign In</button>
-    </div>
-  
-    <div class="openBtn">
-      <div class="menuCard">Order Online</div>
-      <button (click)="openDialog('one')">Soups and Appetisers</button>
-      <button (click)="openDialog('two')">Main Course</button>
-      <button (click)="openDialog('three')">Roti and Rice</button>
-      <button (click)="openDialog('four')">Desserts and <br> Fix Thali</button>
-    </div>
-  
-    <!-- Dialog One -->
-    <dialog #dialogOne>
-      <form method="dialog">
-        <h2>~ Soups ~</h2>
-        <div *ngFor="let item of soups">
-          <p class="itemBox">
-            {{item.name}} - {{item.price}} Rs.
-            <button class="addbtn" (click)="addToCart(item)">Add</button>
-          </p>
-          <hr />
-        </div>
-        <h2>~ Appetisers ~</h2>
-        <div *ngFor="let item of appetisers">
-          <p class="itemBox">
-            {{item.name}} - {{item.price}} Rs.
-            <button class="addbtn" (click)="addToCart(item)">Add</button>
-          </p>
-          <hr />
-        </div>
-        <button (click)="closeDialog('one')">Close</button>
-      </form>
-    </dialog>
-  
-    <!-- Dialog Two -->
-    <dialog #dialogTwo>
-      <form method="dialog">
-        <h2>~ Main Course ~</h2>
-        <div *ngFor="let item of mainCourse">
-          <p class="itemBox">
-            {{item.name}} - {{item.price}} Rs.
-            <button class="addbtn" (click)="addToCart(item)">Add</button>
-          </p>
-          <hr />
-        </div>
-        <button (click)="closeDialog('two')">Close</button>
-      </form>
-    </dialog>
-  
-    <!-- Dialog Three -->
-    <dialog #dialogThree>
-      <form method="dialog">
-        <h2>~ Roti ~</h2>
-        <div *ngFor="let item of roti">
-          <p class="itemBox">
-            {{item.name}} - {{item.price}} Rs.
-            <button class="addbtn" (click)="addToCart(item)">Add</button>
-          </p>
-          <hr />
-        </div>
-        <h2>~ Rice ~</h2>
-        <div *ngFor="let item of rice">
-          <p class="itemBox">
-            {{item.name}} - {{item.price}} Rs.
-            <button class="addbtn" (click)="addToCart(item)">Add</button>
-          </p>
-          <hr />
-        </div>
-        <button (click)="closeDialog('three')">Close</button>
-      </form>
-    </dialog>
-  
-    <!-- Dialog Four -->
-    <dialog #dialogFour>
-      <form method="dialog">
-        <h2>~ Desserts ~</h2>
-        <div *ngFor="let item of desserts">
-          <p class="itemBox">
-            {{item.name}} - {{item.price}} Rs.
-            <button class="addbtn" (click)="addToCart(item)">Add</button>
-          </p>
-          <hr />
-        </div>
-        <h2>~ Fix Thali ~</h2>
-        <div *ngFor="let item of thali">
-          <p class="itemBox">
-            {{item.name}} - {{item.price}} Rs.
-            <button class="addbtn" (click)="addToCart(item)">Add</button>
-          </p>
-          <hr />
-        </div>
-        <button (click)="closeDialog('four')">Close</button>
-      </form>
-    </dialog>
-  
-    <!-- Food Cart Section -->
-    <div class="container">
-      <div class="YourFoodCart">
-        <h2 class="text-center mt-5">Your Food Cart</h2>
-        <div id="cart" class="mb-5">
-          <div *ngFor="let item of cartItems">
-            {{item.name}} - {{item.price}} Rs.
-          </div>
-        </div>
-        <div class="checkout">
-          <p id="cart-total">Cart Total: {{cartTotal}} Rs.</p>
-          <input type="submit" value="Proceed to Pay" class="Paybtn" (click)="proceedToPay()">
-        </div>
-      </div>
-    </div>
-  
-    <!-- Footer -->
-    <footer>
-      <div class="footer-container">
-        <div class="left_footer">
-          <div class="l">The Foodyssey Haven</div>
-        </div>
-  
-        <div class="footer-info">
-          <p class="address"><i class="uil uil-map-marker"></i>Shoppers Arcade, near Adani college, Adani Shantigram, Ahmedabad - 382352</p>
-          <p class="phone"><i class="uil uil-phone"></i>0123456789</p>
-          <p><i class="uil uil-envelope"></i>TheFoodysseyHaven&#64;restau.com</p>
-        </div>
-  
-        <div class="footer-social">
-          <a href="https://x.com/?lang=en" class="fa fa-twitter" target="_blank"></a>
-          <a href="https://www.facebook.com/" class="fa fa-facebook" target="_blank"></a>
-          <a href="https://www.instagram.com/" class="fa fa-instagram" target="_blank"></a>
-        </div>
-      </div>
-  
-      <div class="footer-bottom">
-        <div class="navigation_footer">
-          <a routerLink="/home">Home</a>
-          <a routerLink="/menu">Menu</a>
-          <a routerLink="/about">AboutUs</a>
-          <a routerLink="/feedback">Feedback</a>
-        </div>
-        <p>&copy; 2024 The Foodyssey Haven. All rights reserved.</p>
-        <p>The Foodyssey Haven Co.</p>
-      </div>
-    </footer>
+
+  <div class="openBtn">
+    <div class="menuCard">Order Online</div>
+    <button (click)="openDialog('DialogOne')">Soups and Appetisers</button>
+    <button (click)="openDialog('DialogTwo')">Main Course</button>
+    <button (click)="openDialog('DialogThree')">Roti and Rice</button>
+    <button (click)="openDialog('DialogFour')">Desserts and Fix Thali</button>
   </div>
-  
+
+  <!-- Dialog One -->
+  <dialog id="DialogOne" *ngIf="showDialogOne"> 
+    <form method="dialog">
+      <h2>~ Soups ~</h2>
+      <div>
+        <p class="itemBox">Cream of Tomato - 90 Rs.<button type="button"
+            (click)="addToCart('Cream of Tomato', 90)">Add</button></p>
+        <hr>
+        <p class="itemBox">Cheese corn Soup - 105 Rs.<button type="button"
+            (click)="addToCart('Cheese corn Soup', 105)">Add</button></p>
+        <hr>
+        <p class="itemBox">Almond Broccoli Soup - 105 Rs.<button type="button"
+            (click)="addToCart('Almond Broccoli Soup', 105)">Add</button></p>
+        <hr>
+        <p class="itemBox">Hot & Sour Soup - 105 Rs.<button type="button"
+            (click)="addToCart('Hot & Sour Soup', 105)">Add</button></p>
+        <hr>
+        <p class="itemBox">Sweet Corn Soup - 110 Rs.<button type="button"
+            (click)="addToCart('Sweet Corn Soup', 110)">Add</button></p>
+        <hr>
+      </div>
+
+      <h2>~ Appetisers ~</h2>
+      <div>
+        <p class="itemBox">Veg Manchurian - 150 Rs.<button type="button"
+            (click)="addToCart('Veg Manchurian', 150)">Add</button></p>
+        <hr>
+        <p class="itemBox">Spring Roll - 130 Rs.<button type="button"
+            (click)="addToCart('Spring Roll', 130)">Add</button></p>
+        <hr>
+        <p class="itemBox">Paneer Chilly Dry - 150 Rs.<button type="button"
+            (click)="addToCart('Paneer Chilly Dry', 150)">Add</button></p>
+        <hr>
+        <p class="itemBox">Harabhara Kebab - 120 Rs.<button type="button"
+            (click)="addToCart('Harabhara Kebab', 120)">Add</button></p>
+        <hr>
+        <p class="itemBox">Hakka Noodles - 150 Rs.<button type="button"
+            (click)="addToCart('Hakka Noodles', 150)">Add</button></p>
+        <hr>
+      </div>
+
+      <button type="button" (click)="closeDialog('DialogOne')">Close</button>
+    </form>
+  </dialog>
+
+  <!-- Dialog Two -->
+  <dialog id="DialogTwo" *ngIf="showDialogTwo">
+    <form method="dialog">
+      <h2>~ Main Course ~</h2>
+      <div>
+        <p class="itemBox">Paneer Butter Masala - 180 Rs.<button type="button"
+            (click)="addToCart('Paneer Butter Masala', 180)">Add</button></p>
+        <hr>
+        <p class="itemBox">Mix Vegetable - 180 Rs.<button type="button"
+            (click)="addToCart('Mix Vegetable', 180)">Add</button></p>
+        <hr>
+        <p class="itemBox">Cheese Butter Masala - 200 Rs.<button type="button"
+            (click)="addToCart('Cheese Butter Masala', 200)">Add</button></p>
+        <hr>
+        <!-- Add more main course items as needed -->
+      </div>
+
+      <button type="button" (click)="closeDialog('DialogTwo')">Close</button>
+    </form>
+  </dialog>
+
+  <!-- Dialog Three -->
+  <dialog id="DialogThree" *ngIf="showDialogThree">
+    <form method="dialog">
+      <h2>~ Roti ~</h2>
+      <div>
+        <p class="itemBox">Plain Roti - 20 Rs.<button type="button" (click)="addToCart('Plain Roti', 20)">Add</button>
+        </p>
+        <hr>
+        <p class="itemBox">Butter Roti - 30 Rs.<button type="button" (click)="addToCart('Butter Roti', 30)">Add</button>
+        </p>
+        <hr>
+        <!-- Add more roti items -->
+      </div>
+
+      <h2>~ Rice ~</h2>
+      <div>
+        <p class="itemBox">Plain Rice - 100 Rs.<button type="button" (click)="addToCart('Plain Rice', 100)">Add</button>
+        </p>
+        <hr>
+        <p class="itemBox">Jeera Rice - 130 Rs.<button type="button" (click)="addToCart('Jeera Rice', 130)">Add</button>
+        </p>
+        <hr>
+        <!-- Add more rice items -->
+      </div>
+
+      <button type="button" (click)="closeDialog('DialogThree')">Close</button>
+    </form>
+  </dialog>
+
+  <!-- Dialog Four -->
+  <dialog id="DialogFour" *ngIf="showDialogFour">
+    <form method="dialog">
+      <h2>~ Desserts ~</h2>
+      <div>
+        <p class="itemBox">Gulab Jamun - 85 Rs.<button type="button" (click)="addToCart('Gulab Jamun', 85)">Add</button>
+        </p>
+        <hr>
+        <p class="itemBox">Jalebi - 75 Rs.<button type="button" (click)="addToCart('Jalebi', 75)">Add</button></p>
+        <hr>
+        <p class="itemBox">Rasgulla - 80 Rs.<button type="button" (click)="addToCart('Rasgulla', 80)">Add</button></p>
+        <hr>
+      </div>
+
+      <button type="button" (click)="closeDialog('DialogFour')">Close</button>
+    </form>
+  </dialog>
+
+</div>
+<!-- Existing code above remains same -->
+
+<!-- CART CONTAINER -->
+<div class="cart-container">
+  <h2>Your Cart</h2>
+  <div *ngIf="cartItems.length > 0; else emptyCart">
+    <ul>
+      <li *ngFor="let item of cartItems; let i = index">
+        {{ item.name }} - {{ item.price }} Rs.
+        <button class="removebtn" (click)="removeFromCart(i)">Remove</button>
+      </li>
+    </ul>
+    <h3>Total: {{ getTotal() }} Rs.</h3>
+  </div>
+
+  <ng-template #emptyCart>
+    <p>Your cart is empty.</p>
+  </ng-template>
+</div>

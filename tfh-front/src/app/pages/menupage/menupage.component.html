@@ -1,12 +1,13 @@
 <div class="cont1">
     <div class="menu-container">
         <!-- Previous Button -->
-        <button class="lrNav" id="prev-btn">
+        <button class="lrNav" id="prev-btn" (click)="goPrevPage()">
             <i class="uil uil-arrow-circle-left"></i>
         </button>
 
         <!-- Book -->
         <div id="book" class="book">
+            <!-- paper - 1 -->
             <div id="p1" class="paper">
                 <div class="front">
                     <div id="f1" class="front-content">
@@ -49,7 +50,7 @@
                                         Sweet Corn Soup ------------------------------------------------------------ 110
                                         Rs.
                                     </li>
-                                    <img src="ProjectImages/SoupImg.jpg" id="SoupImg" alt="Creamy Soup" />
+                                    <img src="assets/SoupImg.jpg" id="SoupImg" alt="Creamy Soup" />
                                 </ul>
                             </div>
                             <div class="appetisers">
@@ -75,18 +76,268 @@
                                         Hakka Noodles -------------------------------------------------------------- 150
                                         Rs.
                                     </li>
-                                    <img src="ProjectImages/HakkaNoodlesImg.jpg" id="HNImg" alt="Hakka Noodles" />
+                                    <img src="assets/HakkaNoodlesImg.jpg" id="HNImg" alt="Hakka Noodles" />
                                 </ul>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- Repeat for other papers and sections (p2, p3, etc.) -->
+            <div id="p2" class="paper">
+                <div class="front">
+                    <div id="f2" class="front-content">
+                        <div class="left">
+                            <i class="uil uil-restaurant"></i>
+                            <h1 class="symbol">&nbsp;&nbsp;The Foodyssey Haven&nbsp;&nbsp;</h1>
+                            <i class="uil uil-utensils-alt"></i>
+                        </div>
+                        <div class="BoxMenu2">
+                            <div class="maincourse">
+                                <ul>
+                                    <h4>~ Main Course ~</h4>
+                                    <li>
+                                        Paneer Butter Masala
+                                        ---------------------------------------------------- 180
+                                        Rs.
+                                    </li>
+                                    <li>
+                                        Mix Vegetable
+                                        ---------------------------------------------------------------
+                                        180 Rs.
+                                    </li>
+                                    <li>
+                                        Cheese Butter Masala
+                                        --------------------------------------------------- 200
+                                        Rs.
+                                    </li>
+                                    <li>
+                                        Veg Handi Masala
+                                        ---------------------------------------------------------
+                                        180 Rs.
+                                    </li>
+                                    <li>
+                                        Paneer Kadhai
+                                        ---------------------------------------------------------------
+                                        180 Rs.
+                                    </li>
+                                    <li>
+                                        Veg Makhanwala
+                                        -----------------------------------------------------------
+                                        190 Rs.
+                                    </li>
+                                    <li>
+                                        Paneer Handi
+                                        ----------------------------------------------------------------
+                                        180 Rs.
+                                    </li>
+                                    <li>
+                                        Khoya Kaju
+                                        -------------------------------------------------------------------
+                                        200 Rs.
+                                    </li>
+                                    <li>
+                                        Paneer Tikka Masala
+                                        ---------------------------------------------------- 200
+                                        Rs.
+                                    </li>
+                                    <li>
+                                        Veg Kolhapuri
+                                        ----------------------------------------------------------------
+                                        180 Rs.
+                                    </li>
+                                    <li>
+                                        Shahi Tikka Masala
+                                        -------------------------------------------------------
+                                        220 Rs.
+                                    </li>
+                                    <li>
+                                        Malai Khofta
+                                        ----------------------------------------------------------------
+                                        200 Rs.
+                                    </li>
+                                    <li>
+                                        Paneer Bhurji
+                                        ----------------------------------------------------------------
+                                        200 Rs.
+                                    </li>
+                                    <li>
+                                        Dum Aloo
+                                        ----------------------------------------------------------------------
+                                        180 Rs.
+                                    </li>
+                                    <img src="assets/PBMImg.png" id="PBMImg" alt="Paneer Butter Masala Sabji" />
+                                    <img src="assets/KhoyaKaju.jpg" id="KhoyaKaju" alt="Khoya Kaju Sabji" />
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="back">
+                    <div id="b2" class="back-content">
+                        <div class="left">
+                            <i class="uil uil-restaurant"></i>
+                            <h1 class="symbol">&nbsp;&nbsp;The Foodyssey Haven&nbsp;&nbsp;</h1>
+                            <i class="uil uil-utensils-alt"></i>
+                        </div>
+                        <div class="BoxMenu3">
+                            <div class="roti">
+                                <ul>
+                                    <h4>~ Roti ~</h4>
+                                    <li>
+                                        Plain Roti
+                                        ------------------------------------------------------------------------
+                                        20 Rs.
+                                    </li>
+                                    <li>
+                                        Butter Roti
+                                        -----------------------------------------------------------------------
+                                        30 Rs.
+                                    </li>
+                                    <li>
+                                        Naan
+                                        ------------------------------------------------------------------------------
+                                        40 Rs.
+                                    </li>
+                                    <li>
+                                        Cheese Naan
+                                        -------------------------------------------------------------------
+                                        65 Rs.
+                                    </li>
+                                    <li>
+                                        Butter Paratha
+                                        -----------------------------------------------------------------
+                                        60 Rs.
+                                    </li>
+                                    <img src="assets/NaanImg.jpg" id="NaanImg" alt="Butter Naan" />
+                                </ul>
+                            </div>
+
+                            <div class="rice">
+                                <ul>
+                                    <h4>~ Rice ~</h4>
+                                    <li>
+                                        Plain Rice
+                                        -----------------------------------------------------------------------
+                                        100 Rs.
+                                    </li>
+                                    <li>
+                                        Jeera Rice
+                                        -----------------------------------------------------------------------
+                                        130 Rs.
+                                    </li>
+                                    <li>
+                                        Veg Pulao
+                                        -----------------------------------------------------------------------
+                                        150 Rs.
+                                    </li>
+                                    <li>
+                                        Veg Biryani
+                                        --------------------------------------------------------------------
+                                        200 Rs.
+                                    </li>
+                                    <li>
+                                        Hydrabadi Biryani
+                                        ----------------------------------------------------------
+                                        220 Rs.
+                                    </li>
+                                    <img src="assets/VegBiryaniImg.jpg" id="VegBiryaniImg" alt="Veg Biryani" />
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Paper 3 -->
+            <div id="p3" class="paper">
+                <div class="front">
+                    <div id="f3" class="front-content">
+                        <div class="left">
+                            <i class="uil uil-restaurant"></i>
+                            <h1 class="symbol">&nbsp;&nbsp;The Foodyssey Haven&nbsp;&nbsp;</h1>
+                            <i class="uil uil-utensils-alt"></i>
+                        </div>
+                        <div class="BoxMenu4">
+                            <div class="desserts">
+                                <ul>
+                                    <h4>~ Desserts ~</h4>
+                                    <li>
+                                        Gulab Jamun
+                                        -------------------------------------------------------------------
+                                        85 Rs.
+                                    </li>
+                                    <li>
+                                        Jalebi
+                                        ------------------------------------------------------------------------------
+                                        75 Rs.
+                                    </li>
+                                    <li>
+                                        Rasgulla
+                                        -------------------------------------------------------------------------
+                                        80 Rs.
+                                    </li>
+                                    <li>
+                                        Vanilla Ice Cream
+                                        ------------------------------------------------------------
+                                        50 Rs.
+                                    </li>
+                                    <li>
+                                        Cookie Cream Ice Cream
+                                        ------------------------------------------------- 70 Rs.
+                                    </li>
+                                    <li>
+                                        Choco Lava Cake
+                                        ----------------------------------------------------------
+                                        100 Rs.
+                                    </li>
+                                    <img src="assets/GulabJamun.jpg" id="GulabJamun" alt="Gulab Jamun" />
+                                </ul>
+                            </div>
+
+                            <div class="fixthali">
+                                <ul>
+                                    <h4>~ Fix Thali ~</h4>
+                                    <li>
+                                        Punjabi Thali
+                                        -----------------------------------------------------------------
+                                        250 Rs.
+                                    </li>
+                                    <li>
+                                        Gujarati Thali
+                                        ---------------------------------------------------------------
+                                        200 Rs.
+                                    </li>
+                                    <li>
+                                        Dal Bati
+                                        ------------------------------------------------------------------------
+                                        180 Rs.
+                                    </li>
+                                    <li>
+                                        Chole Puri/Kulcha
+                                        ----------------------------------------------------------
+                                        180 Rs.
+                                    </li>
+                                    <img src="assets/PunjabiThaliImg.jpg" id="PunjabiThaliImg"
+                                        alt="Punjabi Thali" />
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="back">
+                    <div id="b3" class="back-content">
+                        <div class="left">
+                            <i class="uil uil-restaurant"></i>
+                            <h1 class="symbol">&nbsp;&nbsp;The Foodyssey Haven&nbsp;&nbsp;</h1>
+                            <i class="uil uil-utensils-alt"></i>
+                        </div>
+                        <h1 class="back3text">END</h1>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <!-- Next Button -->
-        <button class="lrNav" id="next-btn">
+        <button class="lrNav" id="next-btn" (click)="goNextPage()">
             <i class="uil uil-arrow-circle-right"></i>
         </button>
     </div>

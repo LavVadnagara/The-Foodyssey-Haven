@@ -23,6 +23,7 @@ body{
 
 /* Book */
 .book {
+    margin-top: 2rem;
     position: relative;
     width: 400px;
     height: 35rem;

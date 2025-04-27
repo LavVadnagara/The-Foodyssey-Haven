@@ -29,13 +29,15 @@
 
 <div class="nav2Cont">
   <div class="FoodCartBtn">
-    <a title="Food Cart" id="FoodCartbutton" routerLink="/foodcart" routerLinkActive="active">
+    <a title="Food Cart" id="FoodCartbutton" routerLink="foodcart" routerLinkActive="active">
+      <router-outlet></router-outlet>
       <i class="uil uil-shopping-cart"></i> FOOD CART
     </a>
   </div>
 
   <div class="DineInBtn">
-    <a title="Dine In" id="DineInbutton" routerLink="/dinein" routerLinkActive="active">
+    <a title="Dine In" id="DineInbutton" routerLink="dinein" routerLinkActive="active">
+      <router-outlet></router-outlet>
       <i class="uil uil-utensils"></i> DINE IN
     </a>
   </div>
