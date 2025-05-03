@@ -1,56 +1,64 @@
 <div class="container">
-    <div class="logo">The Foodyssey Haven</div>
-  
-    <div class="formbox" id="box">
-      <div class="button">
-        <div id="but"></div>
-        <button class="togbut" (click)="toggleMode('login')">Login</button>
-        <button class="togbut" (click)="toggleMode('register')">Register</button>
-      </div>
-  
-      <!-- Login Form -->
-      <form *ngIf="isLoginMode" (ngSubmit)="onLoginSubmit()" class="inp">
-        <div class="InpInc">
-          <input type="email" class="field ULemail" placeholder="Email-Id" required />
-          <i class="uil uil-envelope icon" id="Icon1"></i>
-        </div>
-  
-        <div class="InpInc">
-          <input [type]="showPasswordLogin ? 'text' : 'password'" class="field ULpassword pswd" placeholder="Password" required />
-          <i class="uil uil-lock icon" id="Icon2"></i>
-          <i class="uil" [ngClass]="showPasswordLogin ? 'uil-eye' : 'uil-eye-slash'" id="Icon3" (click)="toggleShowPasswordLogin()"></i>
-        </div>
-  
-        <input class="LoginBtn" type="submit" value="Login">
-      </form>
-  
-      <!-- Registration Form -->
-      <form *ngIf="!isLoginMode" (ngSubmit)="onRegisterSubmit()" class="inp">
-        <div class="RegInc">
-          <input type="text" class="field Uname" placeholder="FullName" required />
-          <i class="uil uil-user"></i>
-        </div>
-  
-        <div class="RegInc">
-          <input type="email" class="field Uemail" placeholder="Email-Id" required />
-          <i class="uil uil-envelope icon" id="Icon1"></i>
-        </div>
-  
-        <div class="RegInc">
-          <input type="tel" class="field Uphone" placeholder="PhoneNo" required />
-          <i class="uil uil-phone"></i>
-        </div>
-  
-        <div class="RegInc">
-          <input [type]="showPasswordRegister ? 'text' : 'password'" class="field Upassword pswd" placeholder="Password" required />
-          <i class="uil uil-lock icon"></i>
-          <i class="uil" [ngClass]="showPasswordRegister ? 'uil-eye' : 'uil-eye-slash'" id="RegPWDIcon" (click)="toggleShowPasswordRegister()"></i>
-        </div>
-  
-        <input type="checkbox" class="Confirm" id="CBConfirm" name="confirmation" required />
-        <label class="Confirm" for="confirmation">Confirm</label>
-        <input type="submit" class="RegBtn" value="Register">
-      </form>
+  <div class="logo">The Foodyssey Haven</div>
+
+  <div class="formbox">
+    <div class="button">
+      <div id="but" [style.left]="isLoginMode ? '0%' : '50%'"></div>
+      <button class="togbut" (click)="toggleMode('login')">Login</button>
+      <button class="togbut" (click)="toggleMode('register')">Register</button>
     </div>
+
+    <!-- Login Form -->
+    <form *ngIf="isLoginMode" (ngSubmit)="onLoginSubmit()" class="form">
+      <div class="input-group">
+        <i class="uil uil-envelope icon"></i>
+        <input type="email" class="field" placeholder="Email-Id" required />
+      </div>
+
+      <div class="input-group">
+        <i class="uil uil-lock icon"></i>
+        <input [type]="showPasswordLogin ? 'text' : 'password'" class="field" placeholder="Password" required />
+        <i 
+          class="uil toggle-icon"
+          [ngClass]="showPasswordLogin ? 'uil-eye' : 'uil-eye-slash'" 
+          (click)="toggleShowPasswordLogin()"></i>
+      </div>
+
+      <input class="submit-btn" type="submit" value="Login" />
+    </form>
+
+    <!-- Registration Form -->
+    <form *ngIf="!isLoginMode" (ngSubmit)="onRegisterSubmit()" class="form">
+      <div class="input-group">
+        <i class="uil uil-user icon"></i>
+        <input type="text" class="field" placeholder="Full Name" required />
+      </div>
+
+      <div class="input-group">
+        <i class="uil uil-envelope icon"></i>
+        <input type="email" class="field" placeholder="Email-Id" required />
+      </div>
+
+      <div class="input-group">
+        <i class="uil uil-phone icon"></i>
+        <input type="tel" class="field" placeholder="Phone Number" required />
+      </div>
+
+      <div class="input-group">
+        <i class="uil uil-lock icon"></i>
+        <input [type]="showPasswordRegister ? 'text' : 'password'" class="field" placeholder="Password" required />
+        <i 
+          class="uil toggle-icon"
+          [ngClass]="showPasswordRegister ? 'uil-eye' : 'uil-eye-slash'" 
+          (click)="toggleShowPasswordRegister()"></i>
+      </div>
+
+      <div class="confirm-group">
+        <input type="checkbox" id="CBConfirm" name="confirmation" required />
+        <label for="CBConfirm">Confirm</label>
+      </div>
+
+      <input type="submit" class="submit-btn" value="Register" />
+    </form>
   </div>
-  
+</div>
