@@ -2,10 +2,11 @@ import { CommonModule } from '@angular/common';
 import { Component} from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
+import { FooterComponent } from '../footer/footer.component';
 
 @Component({
   selector: 'tfh-dinein',
-  imports: [CommonModule , FormsModule],
+  imports: [CommonModule , FormsModule, FooterComponent],
   templateUrl:'./dinein.component.html',
   styleUrls: ['./dinein.component.css']
 })

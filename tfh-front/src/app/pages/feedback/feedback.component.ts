@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { FormsModule } from '@angular/forms'; // Import FormsModule for template-driven forms
+import { FooterComponent } from '../footer/footer.component';
 @Component({
   selector: 'tfh-feedback',
-  imports: [FormsModule],
+  imports: [FormsModule, FooterComponent],
   templateUrl: './feedback.component.html',
   styleUrl: './feedback.component.css'
 })

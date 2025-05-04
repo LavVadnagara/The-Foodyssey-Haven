@@ -1,10 +1,11 @@
 import { CommonModule } from '@angular/common';
 import { Component, ViewChild, ElementRef } from '@angular/core';
 import { Router } from '@angular/router';
+import { FooterComponent } from '../footer/footer.component';
 
 @Component({
   selector: 'tfh-foodcart',
-  imports: [CommonModule],
+  imports: [CommonModule, FooterComponent],
   templateUrl: './foodcart.component.html',
   styleUrls: ['./foodcart.component.css']
 })

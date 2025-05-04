@@ -2,11 +2,13 @@
 
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { FooterComponent } from '../footer/footer.component';
 
 @Component({
   selector: 'tfh-about-us',
+  imports: [FooterComponent],
   templateUrl: './aboutus.component.html',
-  styleUrls: ['./aboutus.component.css'] // Assuming you copy your Aboutus.css here
+  styleUrls: ['./aboutus.component.css'] 
 })
 export class AboutUsComponent {
   

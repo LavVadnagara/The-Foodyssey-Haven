@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { Router} from '@angular/router';
 
 @Component({
   selector: 'tfh-login',
@@ -11,6 +12,7 @@ export class LoginComponent {
   isLoginMode = true;
   showPasswordLogin = false;
   showPasswordRegister = false;
+  constructor(private router: Router) {}
 
   toggleMode(mode: 'login' | 'register') {
     this.isLoginMode = (mode === 'login');
@@ -25,11 +27,14 @@ export class LoginComponent {
   }
 
   onLoginSubmit() {
-    console.log('Login form submitted');
+    alert('Login form submitted');
+  }
+
+  onLogin(){
+    this.router.navigate(['']);
   }
 
   onRegisterSubmit() {
-    console.log('Register form submitted');
+    alert('Register form submitted');
   }
 }
-
