@@ -10,7 +10,7 @@ async function submitDineInForm() {
     console.log('Username: ' + username+'\nEmail: ' + email+'\nMessage: ' + number + '\nRegistration date: ' + rdate + '\nRegistration time: ' + rtime + 'Number of people: ' + npeople);
 
     try {
-        const response = await fetch('http://localhost:5000/api/users/DineIn', {
+        const response = await fetch('http://localhost:5012/api/users/DineIn', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -18,7 +18,8 @@ async function submitDineInForm() {
             body: JSON.stringify({ username, email, number, rdate, rtime, npeople}),
         });
 
-        console.log('Server Response:', response);
+        console.log('LV: DineIn - Server Response:\n');
+        console.log(response);
 
         if (!response.ok) {
             console.log(error) //Feedback submission failed

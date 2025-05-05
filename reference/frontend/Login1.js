@@ -77,7 +77,7 @@ async function submitUserRegisterForm() {
   const password = document.querySelector('.Upassword').value;
 
   try {
-    const URresponse = await fetch('http://localhost:5000/api/users/register', {
+    const URresponse = await fetch('http://localhost:5012/api/users/register', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -85,7 +85,8 @@ async function submitUserRegisterForm() {
       body: JSON.stringify({ username, email, number, password }),
     });
 
-    console.log('Server response:', URresponse);
+    console.log('LV: Register - Server Response:\n');
+    console.log(URresponse);
 
     if (!URresponse.ok) {
       console.error('Server responded with error:', URresponse.status);
@@ -110,7 +111,7 @@ async function submitUserLoginForm() {
   const password = document.querySelector('.ULpassword').value;
 
   try {
-    const ULresponse = await fetch('http://localhost:5000/api/users/login', {
+    const ULresponse = await fetch('http://localhost:5012/api/users/login', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -118,7 +119,8 @@ async function submitUserLoginForm() {
       body: JSON.stringify({ email, password }),
     });
 
-    console.log('Server response:', ULresponse);
+    console.log('LV: Login - Server Response:\n');
+    console.log(ULresponse);
 
     if (!ULresponse.ok) {
       console.error('Server responded with error:', ULresponse.status);

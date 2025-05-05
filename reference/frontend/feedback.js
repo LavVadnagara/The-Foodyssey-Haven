@@ -6,7 +6,7 @@ async function submitFeedbackForm() {
     console.log('Username: ' + username+'\nEmail: ' + email+'\nMessage: ' + message);
 
     try {
-        const response = await fetch('http://localhost:5000/api/users/feedback', {
+        const response = await fetch('http://localhost:5012/api/users/feedback', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -14,7 +14,8 @@ async function submitFeedbackForm() {
             body: JSON.stringify({ username, email, message}),
         });
 
-        console.log('Server Response:', response);
+        console.log('LV: FeedBack - Server Response:\n');
+        console.log(response);
 
         if (!response.ok) {
             console.log(error) //Feedback submission failed
